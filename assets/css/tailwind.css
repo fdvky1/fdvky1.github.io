@@ -5,3 +5,17 @@
 body {
   font-family: "DM Mono", monospace;
 }
+
+.code_header {
+    display: none !important;
+}
+
+pre > code.hljs {
+  overflow-x: auto !important;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+pre > code.hljs::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
