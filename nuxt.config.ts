@@ -1,6 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  runtimeConfig: {
+    public: {
+      SERVICE_URL: process.env.SERVICE_URL!,
+      RECAPTCHA_SITE_KEY: process.env.RECAPTCHA_SITE_KEY!
+    }
+  },
   modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@pinia/nuxt"],
   app: {
     head: {

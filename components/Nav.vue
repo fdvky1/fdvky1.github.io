@@ -13,9 +13,8 @@
             <nuxt-link to="/" class="text-2xl" :class="$router.currentRoute.value.path == '/' ? 'text-white' : ''" v-on:click.native="navOpen = false">_home</nuxt-link>
             <nuxt-link to="/about" class="text-2xl" :class="$router.currentRoute.value.path == '/about' ? 'text-white' : ''" v-on:click.native="navOpen = false">_about</nuxt-link>
             <nuxt-link to="/projects" class="text-2xl" :class="$router.currentRoute.value.path == '/projects' ? 'text-white' : ''" v-on:click.native="navOpen = false">_projects</nuxt-link>
-            <nuxt-link to="/contacts" class="text-2xl" :class="$router.currentRoute.value.path == '/contacts' ? 'text-white' : ''" v-on:click.native="navOpen = false">_contacts</nuxt-link>
+            <nuxt-link to="/contact" class="text-2xl" :class="$router.currentRoute.value.path == '/contact' ? 'text-white' : ''" v-on:click.native="navOpen = false">_contact</nuxt-link>
         </div>
-
     </nav>
 </template>
 
