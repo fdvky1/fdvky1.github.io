@@ -35,6 +35,12 @@ const fixFilename = (path: string) => {
             })
             break;
         case '/projects':
+            navigationState.setState({
+                name: "projects.vue",
+                ext: "vue",
+                bgColor: "#659b8f",
+                textColor: "#4f4e57"
+            })
             break;
         case '/contact':
             navigationState.setState({
