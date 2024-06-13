@@ -1,4 +1,3 @@
-# https://github.com/actions/deploy-pages#usage
 name: Deploy to GitHub Pages
 on:
   workflow_dispatch:
@@ -9,8 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      SERVICE_URL: ${{ env.SERVICE_URL }}
-      RECAPTCHA_SITE_KEY: ${{ env.RECAPTCHA_SITE_KEY }}
+      SERVICE_URL: ${{ secrets.SERVICE_URL }}
+      RECAPTCHA_SITE_KEY: ${{ secrets.RECAPTCHA_SITE_KEY }}
     steps:
       - uses: actions/checkout@v3
       - run: corepack enable
