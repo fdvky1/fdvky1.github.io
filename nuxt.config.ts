@@ -10,7 +10,31 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@pinia/nuxt"],
   app: {
     head: {
-      title: "Fdvky Portfolio",
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+      title: "Bowo Pratama — Portfolio",
+      meta: [
+        {
+          name: "description",
+          content: "Portfolio website"
+        },
+        {
+          property: "og:title",
+          content: "Bowo Pratama — Portfolio"
+        },
+        {
+          property: "og:description",
+          content: "Portfolio website"
+        },
+        {
+          property: "og:title",
+          content: "Bowo Pratama — Portfolio"
+        },
+        {
+          property: "og:image",
+          content: "https://fdvky1.github.io/background.webp"
+        },
+      ],
       link: [
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: ""},
