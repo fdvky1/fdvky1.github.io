@@ -1,6 +1,6 @@
 <template>
-    <nav class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-0 text-neutral-400">
-        <div class="w-full sm:max-w-[15dvw] flex justify-between sm:justify-start items-center">
+    <nav class="flex flex-col sm:flex-row sm:items-center sm:justify-between lg:justify-start gap-2 sm:gap-0 text-neutral-400">
+        <div class="w-full sm:w-[15rem] flex justify-between sm:justify-start items-center">
             <nuxt-link to="/">
                 <h1 class="text-2xl" style="font-weight: 500;">Fdvky</h1>
             </nuxt-link>

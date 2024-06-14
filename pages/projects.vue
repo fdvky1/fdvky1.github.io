@@ -1,6 +1,6 @@
 <template>
     <div class="h-full w-full flex flex-col xl:flex-row pt-4 gap-3">
-        <div class="w-full lg:max-w-[15dvw] text-[#c5cbd3]">
+        <div class="w-full lg:w-[16rem] text-[#c5cbd3]">
             <div class="flex items-center gap-1.5 mb-2.5">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="rgba(197,203,211,1)"><path d="M12 16L6 10H18L12 16Z"></path></svg>
                 <span class="text-lg">Projects</span>
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-[calc(100vw-1.5rem)] -ml-4 h-full lg:-mr-4 space-y-2 md:space-y-4">
+        <div class="w-[calc(100vw-1.5rem)] -ml-4 h-full lg:-mr-4 space-y-1 md:space-y-2">
             <div class="w-full max-w-44 px-3 py-1 flex items-center justify-between gap-2 bg-neutral-950 bg-opacity-85">
                 <span class="text-white text-lg">{{navigationState.selectedFile.name}}</span>
                 <button>
