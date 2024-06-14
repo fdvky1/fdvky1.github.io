@@ -32,7 +32,7 @@ export default defineNuxtConfig({
         },
         {
           property: "og:image",
-          content: "https://fdvky1.github.io/images/background.webp"
+          content: "https://fdvky1.github.io/images/projects/portfolio.png"
         },
       ],
       link: [
