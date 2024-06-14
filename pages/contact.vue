@@ -31,14 +31,14 @@
                 </div>
             </div>
         </div>
-        <div class="w-auto max-w-[calc(100vw-1.5rem)] lg:max-w-[calc(85vw-1.5rem)] -ml-4 h-full lg:-mr-4 ">
+        <div class="w-auto max-w-[calc(100vw-1.5rem)] lg:max-w-[calc(85vw-1.5rem)] h-full">
             <div class="w-full max-w-40 px-3 py-1 flex items-center justify-between gap-2 bg-neutral-950 bg-opacity-85">
                 <span class="text-white text-lg">{{navigationState.selectedFile.name}}</span>
                 <button>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12" fill="rgba(243,250,250,1)"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path></svg>
                 </button>
             </div>
-            <div class="flex flex-col lg:flex-row xl:justify-center w-full">
+            <div class="flex justify-center xl:justify-start w-full">
                 <div class="pt-1 sm:pt-8 px-4 w-full lg:max-w-md">
                     <form @submit.prevent="handleSubmit" class="space-y-2 sm:space-y-4 w-full max-w-md">
                         <div v-for="(input, i) in inputs" :key="i" class="flex flex-col gap-0.5 sm:gap-1 text-[#c5cbd3]">
@@ -56,19 +56,24 @@
                     </form>
                 </div>
                 <div class="w-auto max-w-[50%] hidden xl:block">
-                    <div class="bg-neutral-950 bg-opacity-75 rounded-md text-[#c5cbd3] p-2">
-                        <pre class="whitespace-pre-wrap">
-                            <code>
+                    <div class="bg-neutral-950 bg-opacity-75 rounded-md text-[#c5cbd3] p-2 relative">
+                        <div class="flex gap-1 fixed">
+                            <div class="rounded-full h-3 w-3 bg-gray-700 bg-opacity-80"></div>
+                            <div class="rounded-full h-3 w-3 bg-gray-700 bg-opacity-80"></div>
+                            <div class="rounded-full h-3 w-3 bg-gray-700 bg-opacity-80"></div>
+                        </div>
+                        <pre class="whitespace-pre-wrap w-full justify-center overflow-x-auto no-scrollbar">
+                            <code class="inline-block">
 curl  -X POST \
     'https://localhost:3001/contact' \
     --header 'Accept: */*' \
     --header 'User-Agent: {{ ua }}' \
     --header 'Content-Type: application/json' \
     --data-raw '{
-    "name": "{{ inputs[0].value }}",
-    "email": "{{ inputs[1].value }}",
-    "message": `"{{ inputs[2].value.length > 50 ? inputs[2].value.substring(0,50) + "..." : inputs[2].value }}"`,
-    "timestamp": "<ClientOnly>{{ new Date().getTime() }}</ClientOnly>"
+        "name": "{{ inputs[0].value }}",
+        "email": "{{ inputs[1].value }}",
+        "message": `"{{ inputs[2].value.length > 50 ? inputs[2].value.substring(0,50) + "..." : inputs[2].value }}"`,
+        "timestamp": "<ClientOnly>{{ new Date().getTime() }}</ClientOnly>"
     }'
                             </code>
                         </pre>
