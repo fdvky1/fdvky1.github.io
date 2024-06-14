@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-[100dvh] w-full p-3 bg-[url('/images/26796717_2203_w026_n002_1490b_p1_1490.jpg')] bg-no-repeat bg-cover">
+    <div class="min-h-[100dvh] w-full p-3 bg-[url('/images/background.webp')] bg-no-repeat bg-cover">
         <div class="p-4 w-full min-h-[calc(100dvh-1.5rem)] bg-neutral-950 rounded-md bg-opacity-80">
             <Nav/>
             <div class="min-h-[calc(100dvh-6.5rem)] w-full">
