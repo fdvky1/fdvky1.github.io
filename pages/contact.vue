@@ -72,7 +72,7 @@ curl  -X POST \
     --data-raw '{
         "name": "{{ inputs[0].value }}",
         "email": "{{ inputs[1].value }}",
-        "message": `"{{ inputs[2].value.length > 50 ? inputs[2].value.substring(0,50) + "..." : inputs[2].value }}"`,
+        "message": "{{ inputs[2].value.length > 50 ? inputs[2].value.substring(0,50) + "..." : inputs[2].value }}",
         "timestamp": "<ClientOnly>{{ new Date().getTime() }}</ClientOnly>"
     }'
                             </code>
